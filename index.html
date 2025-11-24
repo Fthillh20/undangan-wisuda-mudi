@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="description" content="Undangan Wisuda Muhammad Fatahillah, S.Kom - Universitas XYZ">
+    <meta name="theme-color" content="#0b1f3a">
+    <title>Undangan Wisuda - MUDRIKATUL QAMARIAH S.Kom</title>
+    
+    <!-- External CSS Libraries -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <canvas id="confetti-canvas"></canvas>
+    
+    <!-- 1. HALAMAN PEMBUKA -->
+    <section class="intro-page" id="intro">
+        <div class="academic-pattern"></div>
+        
+        <div class="bokeh-container">
+            <div class="bokeh" style="width: 400px; height: 400px; top: 10%; left: 10%;"></div>
+            <div class="bokeh" style="width: 300px; height: 300px; top: 50%; right: 10%; animation-delay: 5s;"></div>
+            <div class="bokeh" style="width: 350px; height: 350px; bottom: 15%; left: 20%; animation-delay: 10s;"></div>
+        </div>
+        
+        <div class="intro-content">
+            <div class="floating-cap" style="top: 10%; left: 8%;">🎓</div>
+            <div class="floating-cap" style="top: 20%; right: 12%; animation-delay: 3s;">🎓</div>
+            <div class="floating-cap" style="bottom: 15%; left: 15%; animation-delay: 6s;">🎓</div>
+            <div class="floating-cap" style="bottom: 25%; right: 10%; animation-delay: 9s;">🎓</div>
+            
+            <!-- Academic Ornaments -->
+            <div class="academic-ornament ornament-diploma">📜</div>
+            <div class="academic-ornament ornament-book">📖</div>
+            <div class="academic-ornament ornament-medal">🏆</div>
+            <div class="academic-ornament ornament-scroll">📜</div>
+            
+            <!-- Logo Universitas (Icon Topi Toga - Diperkecil) -->
+            <div class="university-logo-container" data-aos="zoom-in">
+                <div class="university-logo-img">
+                    <!-- <img src="logo-universitas.png" alt="Logo Universitas"> -->
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+            </div>
+            
+            <!-- Foto Wisudawan dengan Animasi Bunga -->
+            <div class="hero-photo-wrapper" data-aos="zoom-in" data-aos-delay="300">
+                <div class="flower">🌸</div>
+                <div class="flower">🌺</div>
+                <div class="flower">🌼</div>
+                <div class="flower">🌻</div>
+                <div class="flower">🌷</div>
+                <div class="flower">🌹</div>
+                
+                <div class="hero-photo">
+                    <div class="hero-photo-inner">
+                        <img src="img/foto-profil.jpeg" alt="mudriqatul qamariah">
+                        <!-- <i class="fas fa-user-graduate"></i> -->
+                    </div>
+                </div>
+            </div>
+            
+            <h1 class="intro-title" data-aos="fade-up" data-aos-delay="200">
+                Graduation Party
+            </h1>
+            
+            <h2 class="intro-name" data-aos="fade-up" data-aos-delay="400">
+                Mudrikatul Qamariah
+            </h2>
+            
+
+            
+            <!-- Nama Tamu (Personalisasi) -->
+            <section class="cover">
+                <p id="namaTamu" class="nama-tamu"></p>
+            </section>
+
+            <script>
+                const urlParams = new URLSearchParams(window.location.search);
+                const nama = urlParams.get("to");
+
+                const target = document.getElementById("namaTamu");
+
+                if (nama) {
+                    target.innerText = "Kepada Yth :\n " + decodeURIComponent(nama);
+                } else {
+                    target.innerText = "Kepada Yth: Tamu Undangan";
+                }
+            </script>
+
+            
+            <button class="open-btn" onclick="scrollToSection('opening')" data-aos="fade-up" data-aos-delay="800">
+                <i class="fas fa-envelope-open-text"></i>
+                Buka Undangan
+            </button>
+        </div>
+    </section>
+    
+<!-- 2. UCAPAN PEMBUKA & PROFIL WISUDAWAN (DIGABUNG) -->
+    <section class="opening-section" id="opening">
+        <!-- Floating Toga Ornaments -->
+        <div class="toga-ornament toga-left-1">🎓</div>
+        <div class="toga-ornament toga-left-2">🎓</div>
+        <div class="toga-ornament toga-left-3">🎓</div>
+        <div class="toga-ornament toga-right-1">🎓</div>
+        <div class="toga-ornament toga-right-2">🎓</div>
+        <div class="toga-ornament toga-right-3">🎓</div>
+        
+        <div class="opening-content" data-aos="fade-up">
+            <!-- Arabic Greeting -->
+            <div class="arabic-greeting">
+                ٱلسَّلَامُ عَلَيْكُمْ وَرَحْمَةُ ٱللَّٰهِ وَبَرَكَاتُهُ
+            </div>
+            <div class="indonesian-greeting">
+                Assalamualaikum Warahmatullahi Wabarakatuh
+            </div>
+
+            <p class="opening-text" data-aos="fade-up" data-aos-delay="600">
+                Dengan penuh rasa syukur kepada Allah SWT, saya mengundang Bapak/Ibu/Saudara/i 
+                untuk hadir dalam momen berharga wisuda saya sebagai tanda pencapaian perjalanan pendidikan.
+            </p>
+            
+            <!-- Profile Photo dengan Frame Menarik -->
+            <div class="profile-frame-wrapper" data-aos="zoom-in" data-aos-delay="200">
+                <div class="frame-decoration frame-tl">🌟</div>
+                <div class="frame-decoration frame-tr">🌟</div>
+                <div class="frame-decoration frame-bl">🌟</div>
+                <div class="frame-decoration frame-br">🌟</div>
+
+                <div class="profile-frame">
+                    <div class="profile-frame-inner">
+                        <!-- Ganti dengan foto asli wisudawan -->
+                        <img src="img/foto-profil2.jpeg" alt="Mudriqatul Qamariah">
+                        <!-- <i class="fas fa-user-graduate"></i> -->
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Informasi Wisudawan -->
+            <div class="graduate-info" data-aos="fade-up" data-aos-delay="400">
+                <h2 class="graduate-name">MUDRIKATUL QAMARIAH S.Kom</h2>
+                <!-- <div class="graduate-details">
+                    <p class="graduate-university">
+                        <i class="fas fa-university"></i>
+                        Universitas XYZ
+                    </p>
+                    <p class="graduate-major">
+                        <i class="fas fa-book-open"></i>
+                        Teknik Informatika
+                    </p>
+                </div> -->
+                
+                <!-- Informasi Orang Tua -->
+                <!-- <div class="parent-info" data-aos="fade-up" data-aos-delay="500">
+                    <p class="parent-label">Putra dari</p>
+                    <p class="parent-names">
+                        Bapak <strong>Nama Ayah</strong> & Ibu <strong>Nama Ibu</strong>
+                    </p>
+                </div>
+            </div> -->
+            
+        
+        </div>
+    </section>
+    
+    <!-- 4. DETAIL ACARA -->
+    <section class="event-section">
+        <!-- Decorative Lines -->
+        <div class="event-decorative-line event-line-top"></div>
+        <div class="event-decorative-line event-line-bottom"></div>
+        
+        <!-- Floating Event Ornaments -->
+        <div class="event-ornament event-ornament-1">📅</div>
+        <div class="event-ornament event-ornament-2">🕐</div>
+        <div class="event-ornament event-ornament-3">📍</div>
+        <div class="event-ornament event-ornament-4">🎊</div>
+        <div class="event-ornament event-ornament-5">🎉</div>
+        <div class="event-ornament event-ornament-6">✨</div>
+        
+        <h2 class="section-title"  data-aos="fade-up">Detail Acara</h2>
+        
+        <div class="event-grid">
+            <div class="event-card" data-aos="fade-up" data-aos-delay="100">
+                <i class="fas fa-calendar-alt"></i>
+                <h3>Tanggal</h3>
+                <p>Sabtu, 29 November 2025</p>
+            </div>
+            
+            <div class="event-card" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-clock"></i>
+                <h3>Waktu</h3>
+                <p>14:00 WIT  - selesai</p>
+            </div>
+            
+            <div class="event-card" data-aos="fade-up" data-aos-delay="300">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Tempat</h3>
+                <p>Rumah Kediaman Bpk Alm Drs. Ibrahim Ahmad<br>Waiheru</p>
+            </div>
+        </div>
+        
+        <!-- Google Maps Embed -->
+        <div class="map-container" data-aos="fade-up" data-aos-delay="600">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3411.5204639790854!2d128.22100609999998!3d-3.625045400000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d6cef0028d8d02d%3A0x7fcc9f90f244c7e8!2sMudrika%20Home!5e1!3m2!1sen!2sid!4v1763986860899!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+
+
+        
+        <div style="text-align: center; position: relative; z-index: 10;" data-aos="fade-up" data-aos-delay="700">
+            <button class="map-btn" onclick="window.open('https://maps.app.goo.gl/SCMvSHw7Jbd5TUu56')">
+                📍 Buka Lokasi di Google Maps
+            </button>
+        </div>
+        
+        <!-- Countdown -->
+        <div class="countdown-container" data-aos="fade-up" data-aos-delay="500">
+            <h3 class="countdown-title">⏳ Menuju Hari Bahagia</h3>
+            <div class="countdown-timer">
+                <div class="time-box">
+                    <div class="time-number" id="days">00</div>
+                    <div class="time-label">Hari</div>
+                </div>
+                <div class="time-box">
+                    <div class="time-number" id="hours">00</div>
+                    <div class="time-label">Jam</div>
+                </div>
+                <div class="time-box">
+                    <div class="time-number" id="minutes">00</div>
+                    <div class="time-label">Menit</div>
+                </div>
+                <div class="time-box">
+                    <div class="time-number" id="seconds">00</div>
+                    <div class="time-label">Detik</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 5. GALERI KENANGAN -->
+    <section class="gallery-section">
+        <h2 class="section-title" data-aos="fade-up">Galeri Kenangan</h2>
+        
+        <!-- Carousel Gallery (Gallery 1) -->
+        <div class="carousel-wrapper" data-aos="fade-up" data-aos-delay="200">
+            <div class="carousel-container">
+                <div class="carousel-track" id="carouselTrack">
+                    <div class="carousel-slide">
+                        <div class="slide-image">
+                            <!-- GANTI DENGAN FOTO ASLI -->
+                            <img src="img/kenangan/kenangan-1.jpeg" alt="Momen Sidang">
+                            <!-- <i class="fas fa-gavel"></i> -->
+                        </div>
+                        <!-- <div class="slide-caption">Momen Sidang</div> -->
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="slide-image">
+                            <img src="img/kenangan/kenangan-2.jpeg" alt="Teman Sebangku">
+                            <!-- <i class="fas fa-users"></i> -->
+                        </div>
+                        <!-- <div class="slide-caption">Teman Sebangku</div> -->
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="slide-image">
+                            <img src="img/kenangan/kenangan-3.jpeg" alt="Hari Terakhir Kuliah">
+                            <!-- <i class="fas fa-laptop-code"></i> -->
+                        </div>
+                        <!-- <div class="slide-caption">Hari Terakhir Kuliah</div> -->
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="slide-image">
+                            <img src="img/kenangan/kenangan-4.jpeg" alt="Perpustakaan Kampus">
+                            <!-- <i class="fas fa-book-reader"></i> -->
+                        </div>
+                        <!-- <div class="slide-caption">Perpustakaan Kampus</div> -->
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="slide-image">
+                            <img src="img/kenangan/kenangan-5.jpeg" alt="Persiapan Wisuda">
+                            <!-- <i class="fas fa-graduation-cap"></i> -->
+                        </div>
+                        <!-- <div class="slide-caption">Persiapan Wisuda</div> -->
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="slide-image">
+                            <img src="img/kenangan/kenangan-6.jpeg" alt="Persiapan Wisuda1">
+                            <!-- <i class="fas fa-graduation-cap"></i> -->
+                        </div>
+                        <!-- <div class="slide-caption">Persiapan Wisuda</div> -->
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="slide-image">
+                            <img src="img/kenangan/kenangan-7.jpeg" alt="Persiapan Wisuda2">
+                            <!-- <i class="fas fa-graduation-cap"></i> -->
+                        </div>
+                        <!-- <div class="slide-caption">Persiapan Wisuda</div> -->
+                    </div>
+                </div>
+                
+                <button class="carousel-btn carousel-prev" onclick="moveSlide(-1)">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="carousel-btn carousel-next" onclick="moveSlide(1)">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            
+            <div class="carousel-indicators" id="indicators"></div>
+        </div>
+        
+        <!-- Grid Gallery (Gallery 2) -->
+        <div class="grid-gallery" data-aos="fade-up" data-aos-delay="400">
+            <h3 class="grid-gallery-title">Momen Lainnya</h3>
+            <div class="gallery-grid">
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
+                    <!-- GANTI DENGAN FOTO ASLI -->
+                    <img src="img/album-lainnya/album1.jpeg" alt="Kegiatan Kampus">
+                    <!-- <i class="fas fa-camera"></i> -->
+                    <!-- <div class="gallery-item-overlay">
+                        <div class="gallery-item-title">Kegiatan Kampus</div>
+                    </div> -->
+                </div>
+                
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="img/album-lainnya/album3.jpeg" alt="Praktikum Lab">
+                    <!-- <i class="fas fa-flask"></i> -->
+                    <!-- <div class="gallery-item-overlay">
+                        <div class="gallery-item-title">Praktikum Lab</div>
+                    </div> -->
+                </div>
+                
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="img/album-lainnya/album2.jpeg" alt="Seminar Nasional">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <!-- <div class="gallery-item-overlay">
+                        <div class="gallery-item-title">Seminar Nasional</div>
+                    </div> -->
+                </div>
+                
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
+                    <img src="img/album-lainnya/album4.jpeg" alt="Organisasi">
+                    <!-- <i class="fas fa-users-cog"></i> -->
+                    <!-- <div class="gallery-item-overlay">
+                        <div class="gallery-item-title">Organisasi</div>
+                    </div> -->
+                </div>
+                
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="500">
+                    <img src="img/album-lainnya/album5.jpeg" alt="Proyek Akhir">
+                    <!-- <i class="fas fa-project-diagram"></i>
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-item-title">Proyek Akhir</div>
+                    </div> -->
+                </div>
+                
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="600">
+                    <img src="img/album-lainnya/album6.jpeg" alt="Penghargaan">
+                    <!-- <i class="fas fa-trophy"></i>
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-item-title">Penghargaan</div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 6. ANGPAO DIGITAL / GIFT -->
+    <section class="gift-section">
+        <h2 class="section-title" data-aos="fade-up">Angpao Digital</h2>
+        
+        <div class="gift-container">
+            <!-- Intro Message -->
+            <div class="gift-intro" data-aos="fade-up" data-aos-delay="100">
+                <h3>Turut Memberikan Hadiah</h3>
+                <p>
+                    Bagi Bapak/Ibu/Saudara/i yang ingin memberikan hadiah, 
+                    dapat melalui transfer ke rekening di bawah ini:
+                </p>
+            </div>
+            
+            <!-- BRI Card -->
+            <div class="bank-card" data-aos="zoom-in" data-aos-delay="200">
+                <!-- Bank Logo -->
+                <div class="bank-logo">BSI</div>
+                
+                <!-- Card Chip -->
+                <div class="card-chip"></div>
+                
+                <!-- Account Number -->
+                <div class="account-label">Nomor Rekening</div>
+                <div class="account-number" id="accountNumber">7216625492</div>
+                
+                <!-- Account Name -->
+                <div class="account-label">Nama Penerima</div>
+                <div class="account-name">MUDRIKATUL QAMARIAH </div>
+                
+                <!-- Copy Button -->
+                <button class="copy-btn" onclick="copyAccountNumber()">
+                    <i class="fas fa-copy"></i>
+                    Salin Nomor Rekening
+                </button>
+                
+                <!-- Success Message -->
+                <div class="copy-success" id="copySuccess">
+                    <i class="fas fa-check-circle"></i>
+                    Nomor rekening berhasil disalin!
+                </div>
+            </div>
+            
+            <!-- Thank You Message -->
+            <div class="gift-message" data-aos="fade-up" data-aos-delay="300">
+                <i class="fas fa-heart"></i>
+                <p>
+                    Kehadiran dan doa restu Anda adalah hadiah terbesar bagi kami. 
+                    Terima kasih atas perhatian dan dukungannya. 🙏
+                </p>
+            </div>
+        </div>
+    </section>
+
+<!-- SECTION BUKU TAMU (Tambahkan setelah section opening) -->
+<section class="guestbook-section" id="guestbook">
+    <h2 class="section-title" data-aos="fade-up">Ucapan & Doa</h2>
+    
+    <!-- Form Input -->
+    <div class="guestbook-form-container" data-aos="fade-up" data-aos-delay="200">
+        <form class="guestbook-form" id="guestbookForm" onsubmit="submitUcapan(event)">
+            <div class="form-group">
+                <label for="nama">
+                    <i class="fas fa-user"></i>
+                    Nama Anda
+                </label>
+                <input 
+                    type="text" 
+                    id="nama" 
+                    name="nama" 
+                    placeholder="Masukkan nama Anda"
+                    required
+                    maxlength="50"
+                >
+            </div>
+            
+            <div class="form-group">
+                <label for="ucapan">
+                    <i class="fas fa-comment-dots"></i>
+                    Ucapan & Doa
+                </label>
+                <textarea 
+                    id="ucapan" 
+                    name="ucapan" 
+                    rows="4"
+                    placeholder="Tulis ucapan dan doa Anda..."
+                    required
+                    maxlength="500"
+                ></textarea>
+                <span class="char-counter">0/500</span>
+            </div>
+            
+            <button type="submit" class="submit-btn">
+                <i class="fas fa-paper-plane"></i>
+                Kirim Ucapan
+            </button>
+        </form>
+    </div>
+    
+    <!-- Loading Indicator -->
+    <div class="loading-indicator" id="loadingIndicator" style="display: none;">
+        <div class="spinner"></div>
+        <p>Memuat ucapan...</p>
+    </div>
+    
+    <!-- List Ucapan -->
+    <div class="ucapan-list" id="ucapanList">
+        <!-- Ucapan akan muncul di sini -->
+    </div>
+</section>
+
+
+    
+    <!-- 7. PENUTUP -->
+    <section class="closing-section">
+        <!-- Falling Caps Animation -->
+        <div class="falling-caps" style="left: 10%; animation-delay: 0s;">🎓</div>
+        <div class="falling-caps" style="left: 25%; animation-delay: 1s;">🎓</div>
+        <div class="falling-caps" style="left: 40%; animation-delay: 0.5s;">🎓</div>
+        <div class="falling-caps" style="left: 55%; animation-delay: 1.5s;">🎓</div>
+        <div class="falling-caps" style="left: 70%; animation-delay: 0.8s;">🎓</div>
+        <div class="falling-caps" style="left: 85%; animation-delay: 1.2s;">🎓</div>
+        
+        <div class="closing-content" data-aos="fade-up">
+            <h2 class="closing-title">Terima Kasih</h2>
+            <p class="closing-text">
+                Terima kasih atas doa, dukungan, dan kehadiran Bapak/Ibu/Saudara/i 
+                yang turut serta dalam kebahagiaan saya.
+            </p>
+            
+            <!-- Motivational Quote -->
+            <div class="closing-quote" data-aos="fade-up" data-aos-delay="200">
+                Perjalanan ribuan langkah dimulai dari satu langkah kecil.
+                <div class="closing-quote-author">— Lao Tzu</div>
+            </div>
+            
+            <p class="closing-signature">
+                Salam hangat,<br>
+                Mudrikatul Qamariah🎓
+            </p>
+        </div>
+    </section>
+    
+    <!-- Music Control -->
+    <div class="music-control" onclick="toggleMusic()" id="musicBtn">
+        <i class="fas fa-volume-up" id="musicIcon"></i>
+    </div>
+
+    <!-- Hidden Audio Player -->
+    <audio id="backgroundMusic" loop>
+        <source src="audio/background-music.mpeg" type="audio/mpeg">
+        <source src="audio/background-music.ogg" type="audio/ogg">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <!-- External JavaScript Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="script/script.js"></script>
+    
+    <!-- Guest Name Personalization -->
+    <script src="script/guest-name.js"></script>
+
+    <!-- ucapan dan doa -->
+    <script src="script/guestbook.js"></script>
+</body>
+</html>

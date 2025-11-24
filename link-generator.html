@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Link Generator - Undangan Wisuda</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        input, button {
+            padding: 12px;
+            font-size: 16px;
+            margin: 10px 0;
+            width: 100%;
+        }
+        button {
+            background: #d4af37;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .result {
+            background: #f5f7fa;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 8px;
+            word-break: break-all;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎓 Generator Link Undangan</h1>
+    
+    <label>Nama Tamu:</label>
+    <input type="text" id="guestName" placeholder="Contoh: Ahmad Hidayat">
+    
+    <button onclick="generateLink()">Generate Link</button>
+    
+    <div class="result" id="result" style="display:none;">
+        <h3>Link Undangan:</h3>
+        <p id="linkOutput"></p>
+        <button onclick="copyLink()">📋 Copy Link</button>
+    </div>
+    
+    <script>
+        const BASE_URL = 'https://fthillh20.github.io/undangan-wisuda/'; // GANTI dengan domain Anda
+        
+        function generateLink() {
+            const name = document.getElementById('guestName').value.trim();
+            if (!name) {
+                alert('Mohon isi nama tamu!');
+                return;
+            }
+            
+            const link = BASE_URL + '?to=' + encodeURIComponent(name);
+            document.getElementById('linkOutput').textContent = link;
+            document.getElementById('result').style.display = 'block';
+        }
+        
+        function copyLink() {
+            const link = document.getElementById('linkOutput').textContent;
+            navigator.clipboard.writeText(link).then(() => {
+                alert('✅ Link berhasil dicopy!');
+            });
+        }
+    </script>
+</body>
+</html>
